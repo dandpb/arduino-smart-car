@@ -1,9 +1,3 @@
-/*
- *  * Blink
- *   * Turns on an LED on for one second,
- *    * then off for one second, repeatedly.
- *     */
-
 #include "Arduino.h"
 
 int in1 = 9;
@@ -14,66 +8,80 @@ int ENA = 10;
 int ENB = 5;
 
 void forward() {
-        digitalWrite(ENA, HIGH);
-        digitalWrite(ENB, HIGH);
-        digitalWrite(in1, LOW);
-        digitalWrite(in2, HIGH);
-        digitalWrite(in3, LOW);
-        digitalWrite(in4, HIGH);
-        Serial.println("Forward");
+    digitalWrite(ENA, HIGH);
+    digitalWrite(ENB, HIGH);
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+    Serial.println("Forward");
 }
 
 void back() {
-        digitalWrite(ENA, HIGH);
-        digitalWrite(ENB, HIGH);
-        digitalWrite(in1, HIGH);
-        digitalWrite(in2, LOW);
-        digitalWrite(in3, HIGH);
-        digitalWrite(in4, LOW);
-        Serial.println("Back");
+    digitalWrite(ENA, HIGH);
+    digitalWrite(ENB, HIGH);
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+    Serial.println("Back");
 }
 
 void left() {
-        digitalWrite(ENA, HIGH);
-        digitalWrite(ENB, HIGH);
-        digitalWrite(in1, LOW);
-        digitalWrite(in2, HIGH);
-        digitalWrite(in3, HIGH);
-        digitalWrite(in4, LOW);
-        Serial.println("Left");
+    digitalWrite(ENA, HIGH);
+    digitalWrite(ENB, HIGH);
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    digitalWrite(in3, HIGH);
+    digitalWrite(in4, LOW);
+    Serial.println("Left");
 }
 
 void right() {
-        digitalWrite(ENA, HIGH);
-        digitalWrite(ENB, HIGH);
-        digitalWrite(in1, HIGH);
-        digitalWrite(in2, LOW);
-        digitalWrite(in3, LOW);
-        digitalWrite(in4, HIGH);
-        Serial.println("Right");
+    digitalWrite(ENA, HIGH);
+    digitalWrite(ENB, HIGH);
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, HIGH);
+    Serial.println("Right");
+}
+
+void stop() {
+    digitalWrite(ENA, HIGH);
+    digitalWrite(ENB, HIGH);
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
+    digitalWrite(in4, LOW);
 }
 
 void setup() {
-        pinMode(LED_BUILTIN, OUTPUT);
+    pinMode(LED_BUILTIN, OUTPUT);
 
-        Serial.begin(
-            9600);  // Open the serial port and set the baud rate to 9600
+    Serial.begin(9600);  // Open the serial port and set the baud rate to 9600
 
-        pinMode(in1, OUTPUT);
-        pinMode(in2, OUTPUT);
-        pinMode(in3, OUTPUT);
-        pinMode(in4, OUTPUT);
-        pinMode(ENA, OUTPUT);
-        pinMode(ENB, OUTPUT);
+    pinMode(in1, OUTPUT);
+    pinMode(in2, OUTPUT);
+    pinMode(in3, OUTPUT);
+    pinMode(in4, OUTPUT);
+    pinMode(ENA, OUTPUT);
+    pinMode(ENB, OUTPUT);
 }
 
+int counter = 0;
+
 void loop() {
-        // forward();
-        // delay(1000);
-        // back();
-        delay(1000);
-        left();
-        delay(1000);
-        right();
-        delay(1000);
+    forward();
+    delay(1000);
+    stop();
+    delay(1000);
+    // forward();
+    // delay(1000);
+    // back();
+    // delay(1000);
+    // left();
+    // delay(1000);
+    // right();
+    // delay(1000);
 }
