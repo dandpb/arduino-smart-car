@@ -23,6 +23,14 @@ I use the following tools to make my life easier:
 
 The `.clang-format` is also included in the project.
 
+## Android App
+
+There's an Android project to control the robot via a bluetooth app.
+
+You can move the car back/forward/left/right and control the board lead.
+
+Some stuff is hardcoded (UUID and Bluetooth device name). The code is not the cleanest but works. 
+
 ## Legal Stuff
 
 I have no relationship with Elegoo and I have no economical interest in promoting their hardware products. The code tutorials provided with the kit helped me write this project, however all the code here present is mine.
