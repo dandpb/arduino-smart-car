@@ -1,17 +1,24 @@
 #include <Arduino.h>
 #include <Movement.h>
+#include <Led.h>
 
 void setup() {
-    pinMode(LED_BUILTIN, OUTPUT);
     Serial.begin(9600);
     setupMovement();
 }
 
+bool led = false;
+
 void loop() {
-    forward(1000);
-    stop(1000);
-    left(300);
-    stop(1000);
+    light(true);
+    delay(300);
+    light(false);
+    delay(100);
+
+    //forward(1000);
+    //stop(1000);
+    //left(300);
+    //stop(1000);
     // forward();
     // delay(1000);
     // back();
