@@ -27,7 +27,7 @@ The `.clang-format` is also included in the project.
 
 There's an Android project to control the robot via a bluetooth app.
 
-You can move the car back/forward/left/right and control the board lead.
+You can move the car back/forward/left/right and control the board LED.
 
 Some stuff is hardcoded (UUID and Bluetooth device name). The code is not the cleanest but works. 
 
