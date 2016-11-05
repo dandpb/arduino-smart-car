@@ -1,12 +1,9 @@
-#include "Arduino.h"
-#include "movement.h"
-
-
+#include <Arduino.h>
+#include <Movement.h>
 
 void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
-
-    Serial.begin(9600);  // Open the serial port and set the baud rate to 9600
+    Serial.begin(9600);
     setupMovement();
 }
 

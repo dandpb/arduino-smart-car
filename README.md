@@ -7,12 +7,14 @@ Arduino project for the Elegoo UNO Project Smart Robot Car kit.
 ## Setup
 
 1. Install PlatformIO.
-2. Build with `platformio run`
-3. Upload to robot with `platformio run --target upload`
+2. Build with `make`
+3. Upload to robot with `make upload`
 
 ## Working Environment
 
 I don't use Arduino IDE, rather I just write code with Vim.
+
+There's also a Makefile that handles all the PlatformIO commands.
 
 I use the following tools to make my life easier:
 
