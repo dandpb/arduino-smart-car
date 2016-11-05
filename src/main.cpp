@@ -19,9 +19,24 @@ void loop() {
             case 'B':
                 light(false);
                 break;
+            case 'U':
+                forward(100);
+                break;
+            case 'D':
+                back(100);
+                break;
+            case 'L':
+                left(100);
+                break;
+            case 'R':
+                right(100);
+                break;
+            default:
+                delay(100);
         }
+    } else {
+        delay(100);
     }
-    delay(100);
     // forward(1000);
     // stop(1000);
     // left(300);
