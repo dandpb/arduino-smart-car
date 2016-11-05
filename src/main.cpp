@@ -7,18 +7,25 @@ void setup() {
     setupMovement();
 }
 
-bool led = false;
+int incomingByte = 0;
 
 void loop() {
-    light(true);
-    delay(300);
-    light(false);
+    if (Serial.available() > 0) {
+        incomingByte = Serial.read();
+        switch (incomingByte) {
+            case 'A':
+                light(true);
+                break;
+            case 'B':
+                light(false);
+                break;
+        }
+    }
     delay(100);
-
-    //forward(1000);
-    //stop(1000);
-    //left(300);
-    //stop(1000);
+    // forward(1000);
+    // stop(1000);
+    // left(300);
+    // stop(1000);
     // forward();
     // delay(1000);
     // back();
