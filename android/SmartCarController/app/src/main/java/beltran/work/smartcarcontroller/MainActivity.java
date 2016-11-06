@@ -110,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
         sendData('R');
     }
 
+    @OnClick(R.id.button_explore)
+    public void onClickExplore() {
+        sendData('E');
+    }
+
     private void sendData(char data) {
         if (outStream == null) {
             Toast.makeText(MainActivity.this, "No Out Stream :-(", Toast.LENGTH_SHORT).show();

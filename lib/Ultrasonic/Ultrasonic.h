@@ -1,0 +1,2 @@
+void setupUltrasonic();
+int measureCm();
