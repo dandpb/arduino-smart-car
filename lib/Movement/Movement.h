@@ -5,3 +5,4 @@ void stop();
 void left(int time);
 void right(int time);
 void stop(int time);
+void stateChange();
